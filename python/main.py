@@ -1,6 +1,8 @@
 # os.Open() in golang open file in binary
 # read the file in binary mode
 with open("messages.txt", "rb") as f:
+    # f.read() is a method that read and return up to the number from the current file position then advance the file pointer by that many bytes
+    # f.read(number): read until the byte number, update the pointer
     data = f.read(8)
     while data:
         # convert the binary to str
